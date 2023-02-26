@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Hand Off</title>
+    <link href="https://fonts.cdnfonts.com/css/open-sauce-one" rel="stylesheet">
+    <link href="./global.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            // colors: {
+            //   clifford: '#da373d',
+            // },
+            fontFamily: {
+              sauce: [
+                "Open Sauce One"
+              ],
+            },
+            backgroundColor: {
+              main: "var(--main-bg-color)"
+            },
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-main;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="relative mt-[32px]">
+      <img class="w-[72px] h-[72px] m-auto" src="./assets/images/Logo.svg">
+    </div>
+    <div class="w-[1184px] m-auto">
+      <div class="w-full bg-white h-[632px] mt-[32px] rounded-[40px]">
+        <div class="m-auto  flex flex-col justify-center items-center">
+          <div class="pt-[96px] flex justify-center items-center">
+            <div class="bg-gradient-to-r from-[#FF6C36] to-[#FF9901] w-[59px] h-[32px] border-[3px] border-solid border-white border-opacity-60 rounded-[40px] flex justify-center items-center">
+              <p class="text-white text-center font-sauce font-[700] leading-[22px] text-[16px]">PRO</p>            
+            </div>
+            <p class="text-[#171717] text-center font-sauce font-[500] leading-[22px] text-[16px] ml-[6px]">tools for your DEV organization</p>
+          </div>       
+          <div class="w-[795px] h-[234px] mt-[24px]">
+            <p class="text-[#171717] font-sauce text-center font-[900] leading-[78px] text-[56px] tracking-[-.02em]">
+              Reach millions of developers on DEV and grow your audience like a <span class="bg-gradient-to-r from-[#FF6C36] to-[#FF9901] bg-clip-text text-transparent">PRO</span>
+            </p>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
