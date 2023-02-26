@@ -6,15 +6,17 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Hand Off</title>
     <link href="https://fonts.cdnfonts.com/css/open-sauce-one" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
     <link href="./global.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            // colors: {
-            //   clifford: '#da373d',
-            // },
+            colors: {
+              primary: 'var(--color-text-primary)',
+              secondary: 'var(--color-text-secondary)'
+            },
             fontFamily: {
               sauce: [
                 "Open Sauce One"
@@ -32,29 +34,418 @@
         body {
           @apply bg-main;
         }
+        p {
+          @apply font-sauce
+        }
+        a {
+          @apply font-sauce;
+          @apply font-[400]; 
+          @apply leading-[25px]; 
+          @apply text-[18px]; 
+          @apply text-primary;
+        }
+        a:hover {
+          @apply underline;
+          @apply text-[#4F46E5]
+        }
       }
     </style>
   </head>
   <body>
     <div class="relative mt-[32px]">
-      <img class="w-[72px] h-[72px] m-auto" src="./assets/images/Logo.svg">
+      <img class="w-[72px] h-[72px] m-auto" src="./assets/images/Logo.svg" alt="logo" />
     </div>
-    <div class="w-[1184px] m-auto">
-      <div class="w-full bg-white h-[632px] mt-[32px] rounded-[40px]">
-        <div class="m-auto  flex flex-col justify-center items-center">
-          <div class="pt-[96px] flex justify-center items-center">
-            <div class="bg-gradient-to-r from-[#FF6C36] to-[#FF9901] w-[59px] h-[32px] border-[3px] border-solid border-white border-opacity-60 rounded-[40px] flex justify-center items-center">
-              <p class="text-white text-center font-sauce font-[700] leading-[22px] text-[16px]">PRO</p>            
-            </div>
-            <p class="text-[#171717] text-center font-sauce font-[500] leading-[22px] text-[16px] ml-[6px]">tools for your DEV organization</p>
-          </div>       
-          <div class="w-[795px] h-[234px] mt-[24px]">
-            <p class="text-[#171717] font-sauce text-center font-[900] leading-[78px] text-[56px] tracking-[-.02em]">
-              Reach millions of developers on DEV and grow your audience like a <span class="bg-gradient-to-r from-[#FF6C36] to-[#FF9901] bg-clip-text text-transparent">PRO</span>
-            </p>
-          </div> 
+    <div class="w-[1184px] m-auto mb-[48px]">
+      <section class="w-full bg-white py-[96px]  mt-[32px] rounded-[40px] flex flex-col items-center">
+        <div class="flex justify-center items-center">
+          <div class="bg-gradient-to-r from-[#FF6C36] to-[#FF9901] w-[59px] h-[32px] border-[3px] border-solid border-white border-opacity-60 rounded-[40px] flex justify-center items-center">
+            <p class="text-white text-center font-[700] leading-[22px] text-[16px]">PRO</p>            
+          </div>
+          <p class="text-primary text-center font-[500] leading-[22px] text-[16px] ml-[6px]">tools for your DEV organization</p>
+        </div>       
+        <p class="w-[795px] h-[234px] mt-[24px] text-primary text-center font-[900] leading-[78px] text-[56px] tracking-[-.02em]">
+          Reach millions of developers on DEV and grow your audience like a <span class="bg-gradient-to-r from-[#FF6C36] to-[#FF9901] bg-clip-text text-transparent">PRO</span>
+        </p>
+        <p class="w-[337px] h-[38px] mt-[16px] text-secondary font-[400] leading-[38px] text-[24px]">Your DEV Publishing Sidekick</p>
+        <div class="flex justify-center mt-[40px]">
+          <button class="w-[280px] h-[56px] bg-gradient-to-r from-[#4338CA] hover:from-[#2B238D] to-[#6366F1] hover:to-[#3337DB] shadow-[0_4px_12px_rgba(88,86,228,0.4)] hover:shadow-[0_4px_12px_rgba(88,86,228,0.7)] border-[3px] border-solid border-white border-opacity-30 rounded-[16px]">
+            <p class="font-[700] text-[16px] text-white leading-[26px]">Get Started with PRO tools</p>
+          </button>
+          <button class="w-[239px] h-[56px] flex justify-center items-center hover:bg-[#C7D2FE] hover:border-[3px] border-solid border-[#EEF2FF] rounded-[16px] py-[12px] ml-[10px]">
+            <i class="fa-solid fa-circle-play w-[34.1px] h-[32px] text-[29.5px] bg-gradient-to-r from-[#4338CA] to-[#6366F1] bg-clip-text text-transparent border-[3px] border-solid border-[#8183de] rounded-[48px] shadow-[0_4px_12px_rgba(88,86,228,0.4)]"></i>
+            <p class="w-[131px] font-[700] leading-[16px] text-[16px] text-[#4F46E5] ml-[12px]">Watch the video</p>
+          </button>
         </div>
-      </div>
+      </section>
+      <section class="w-full bg-white mt-[24px] py-[96px] rounded-[40px] flex flex-col items-center">
+        <p class="w-[618px] h-[116px] font-[900] text-center text-[48px] text-primary leading-[58px] tracking-[-.02em]">
+          Complete scaling solution for your organizations
+        </p>
+        <p class="w-[706px] h-[38px] mt-[16px] font-[400] text-secondary text-[24px] leading-[38px]">
+          Give your devrel, marketing, and content teams superpowers
+        </p>
+        <div class="flex gap-[32px] h-[320px] mt-[64px]">
+          <div class="w-[303px] flex flex-col justify-center">
+            <div class="w-[96px] h-[96px] bg-gradient-to-r from-[#4338CA] to-[#6366F1] border-[6px] border-solid border-[#948cee] rounded-[144px] shadow-[0_12px_36px_rgba(88,86,228,0.4)]">
+            </div>
+            <p class="w-[303px] h-[28px] font-[900] text-[20px] leading-[28px] text-primary mt-[32px]">Focus on your content</p>
+            <p class="w-[303px] h-[96px] font-[400] text-[16px] leading-[24px] text-secondary mt-[16px]">
+              Advanced publishing tools let you take the content you're already creating, and syndicate it to 1M+ members on DEV.
+            </p>
+          </div>
+          <div class="border-r-[1px] border-solid border-[#DBDBDB] w-[1px]"></div>
+          <div class="w-[303px] flex flex-col justify-center">
+            <div class="w-[96px] h-[96px] bg-gradient-to-r from-[#4338CA] to-[#6366F1] border-[6px] border-solid border-[#948cee] rounded-[144px] shadow-[0_12px_36px_rgba(88,86,228,0.4)]">
+            </div>
+            <p class="w-[303px] h-[28px] font-[900] text-[20px] leading-[28px] text-primary mt-[32px]">Make your content count</p>
+            <p class="w-[303px] h-[96px] font-[400] text-[16px] leading-[24px] text-secondary mt-[16px]">
+              Reach the DEV audience by boosting your articles to a targeted and relevant audience.
+            </p>
+          </div>
+          <div class="border-r-[1px] border-solid border-[#DBDBDB] w-[1px]"></div>
+          <div class="w-[303px] flex flex-col justify-center">
+            <div class="w-[96px] h-[96px] bg-gradient-to-r from-[#4338CA] to-[#6366F1] border-[6px] border-solid border-[#948cee] rounded-[144px] shadow-[0_12px_36px_rgba(88,86,228,0.4)]">
+            </div>
+            <p class="w-[303px] h-[28px] font-[900] text-[20px] leading-[28px] text-primary mt-[32px]">Understand your following</p>
+            <p class="w-[303px] h-[96px] font-[400] text-[16px] leading-[24px] text-secondary mt-[16px]">
+              Helping you more deeply understand the ecosystem with intelligence tools. Measuring the performance of your reach and engagement
+            </p>
+          </div>
+        </div>
+        <p class="w-[414px] h-[38px] mt-[72px] font-[900] text-primary text-[32px] leading-[38px] tracking-[-.02em]">PRO features of PRO tools</p>
+        <div class="flex gap-[32px] h-[148px] mt-[64px] border-b-[1px] border-solid border-[#DBDBDB]">
+          <div class="flex">
+            <div class="w-[64px] h-[64px] bg-[#FAFAFA] border-[1px] border-solid border-[#E5E5E5] rounded-[32px] flex justify-center items-center">
+              <img src="./assets/images/users.svg" class="w-[34.4px]" alt="users">
+            </div>
+            <div class="ml-[32px]">
+              <p class="w-[392px] h-[28px] font-[900] text-[20px] leading-[28px] text-primary">Boost your content</p>
+              <p class="w-[392px] h-[72px] font-[400] text-[16px] leading-[24px] text-secondary mt-[16px]">
+                Build your audience of relevant readers and potential customer by boosting your content on DEV.
+              </p>
+            </div>
+          </div>
+          <div class="border-r-[1px] border-solid border-[#DBDBDB] w-[1px]"></div>
+          <div class="flex">
+            <div class="w-[64px] h-[64px] bg-[#FAFAFA] border-[1px] border-solid border-[#E5E5E5] rounded-[32px] flex justify-center items-center">
+              <img src="./assets/images/users.svg" class="w-[34.4px]" alt="users">
+            </div>
+            <div class="ml-[32px]">
+              <p class="w-[392px] h-[28px] font-[900] text-[20px] leading-[28px] text-primary">Member Explorer</p>
+              <p class="w-[392px] h-[72px] font-[400] text-[16px] leading-[24px] text-secondary mt-[16px]">
+                Explore the personas that are engaging with your content and community activity about your company.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-[32px] h-[148px]">
+          <div class="flex mt-[31.5px]">
+            <div class="w-[64px] h-[64px] bg-[#FAFAFA] border-[1px] border-solid border-[#E5E5E5] rounded-[32px] flex justify-center items-center">
+              <img src="./assets/images/users.svg" class="w-[34.4px]" alt="users">
+            </div>
+            <div class="ml-[32px]">
+              <p class="w-[392px] h-[28px] font-[900] text-[20px] leading-[28px] text-primary">Link Explorer</p>
+              <p class="w-[392px] h-[72px] font-[400] text-[16px] leading-[24px] text-secondary mt-[16px]">
+                Track popular content by seeing what outside resources are getting linked to the most on DEV.
+              </p>
+            </div>
+          </div>
+          <div class="border-r-[1px] border-solid border-[#DBDBDB] w-[1px]"></div>
+          <div class="flex mt-[31.5px]">
+            <div class="w-[64px] h-[64px] bg-[#FAFAFA] border-[1px] border-solid border-[#E5E5E5] rounded-[32px] flex justify-center items-center">
+              <img src="./assets/images/users.svg" class="w-[34.4px]" alt="users">
+            </div>
+            <div class="ml-[32px]">
+              <p class="w-[392px] h-[28px] font-[900] text-[20px] leading-[28px] text-primary">Advanced Analytics</p>
+              <p class="w-[392px] h-[72px] font-[400] text-[16px] leading-[24px] text-secondary mt-[16px]">
+                Make more accurate decisions with detailed insights and stats on your content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full bg-white py-[96px] mt-[24px] rounded-[40px] flex flex-col items-center">
+        <p class="w-[697px] h-[58px] font-[900] text-[48px] leading-[58px] tracking-[-.02em] text-primary">
+          Start with <span class="bg-gradient-to-r from-[#FF6C36] to-[#FF9901] bg-clip-text text-transparent">PRO</span> tools for FREE
+        </p>
+        <p class="w-[342px] h-[38px] font-[400] text-[24px] leading-[38px] text-secondary mt-[16px]">
+          Know what you are paying for
+        </p>
+        <div class="w-full px-[72px] mt-[64px]">
+          <div class="flex justify-between items-center">
+            <p class="w-[91px] h-[28px] font-[900] text-[20px] leading-[28px] text-primary ml-[24px]">Features</p>
+            <div class="flex">
+              <div class="w-[326px] h-[64px] bg-green-600 bg-opacity-10 rounded-[16px] flex items-center px-[24px] justify-between">
+                <p class="w-[72px] h-[28px] font-[900] text-[20px] leading-[28px] text-[#064E3B]">Starter</p>
+                <p class="w-[87px] h-[28px] font-[400] text-[20px] leading-[28px] text-primary">0$ <span class="text-[16px] text-secondary">forever</span></p>
+              </div>
+              <div class="w-[326px] h-[64px] bg-[#FEF3C7] rounded-[16px] flex items-center px-[24px] justify-between ml-[32px]">
+                <p class="w-[72px] h-[28px] font-[900] text-[20px] leading-[28px] text-[#78350F]">Pro</p>
+                <button class="w-[108px] h-[36px] bg-gradient-to-r from-[#4338CA] to-[#6366F1] border-[3px] border-solid border-[#8082ba] rounded-[8px]">
+                  <p class="font-[600] text-[14px] text-white leading-[20px]">Contact us</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[72px] border-b-[1px] border-solid border-[#DBDBDB] grid grid-cols-3">
+            <p class="font-[600] text-[18px] leading-[25px] text-primary">RSS Feed</p>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[16px] border-b-[1px] border-solid border-[#DBDBDB] grid grid-cols-3">
+            <p class="font-[600] text-[18px] leading-[25px] text-primary">Canonical URLs</p>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[16px] border-b-[1px] border-solid border-[#DBDBDB] grid grid-cols-3">
+            <p class="font-[600] text-[18px] leading-[25px] text-primary">Unlimited Members</p>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[16px] border-b-[1px] border-solid border-[#DBDBDB] grid grid-cols-3">
+            <p class="font-[600] text-[18px] leading-[25px] text-primary">Unlimited Pageviews</p>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[16px] grid grid-cols-3">
+            <p class="font-[600] text-[18px] leading-[25px] text-primary">Schedule Posts</p>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="flex mt-[77px] gap-[16px] items-center">
+            <div class="w-[48px] h-[48px] bg-[#FAFAFA] border-[1px] border-solid border-[#E5E5E5] rounded-[32px] flex justify-center items-center">
+              <img src="./assets/images/analytics.svg" class="w-[21px]" alt="analytics">
+            </div>
+            <div class="w-[143px] h-[48px] bg-[#FAFAFA] border-[1px] border-solid border-[#E5E5E5] rounded-[32px] flex justify-center items-center">
+              <p class="font-[900] text-[20px] leading-[28px] text-primary">Analytics</p>
+            </div>
+            <p class="font-[400] text-[18px] leading-[25px] text-secondary">Measure Your Impact</p>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[40px] border-b-[1px] border-solid border-[#DBDBDB] grid grid-cols-3">
+            <p class="font-[600] text-[18px] leading-[25px] text-primary">Advanced Analytics</p>
+            <div class="flex justify-center items-center">
+              <div class="w-[8px] h-0 border-b-[2.5px] border-solid border-[#A3A3A3]"></div>
+            </div>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[16px] grid grid-cols-3">
+            <p class="font-[600] text-[18px] leading-[25px] text-primary">API Access</p>
+            <div class="flex justify-center items-center">
+              <div class="w-[8px] h-0 border-b-[2.5px] border-solid border-[#A3A3A3]"></div>
+            </div>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="flex mt-[77px] gap-[16px] items-center">
+            <div class="w-[48px] h-[48px] bg-[#FAFAFA] border-[1px] border-solid border-[#E5E5E5] rounded-[32px] flex justify-center items-center">
+              <img src="./assets/images/intelligence.svg" class="w-[23px]" alt="intelligence">
+            </div>
+            <div class="w-[249px] h-[48px] bg-[#FAFAFA] border-[1px] border-solid border-[#E5E5E5] rounded-[32px] flex justify-center items-center">
+              <p class="font-[900] text-[20px] leading-[28px] text-primary">Intelligence Tooling</p>
+            </div>
+            <p class="font-[400] text-[18px] leading-[25px] text-secondary">Be more effective with time/energy & write better based on ecosystem.</p>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[40px] border-b-[1px] border-solid border-[#DBDBDB] grid grid-cols-3">
+            <p class="font-[600] text-[18px] leading-[25px] text-primary">Advanced Member Explorer</p>
+            <div class="flex justify-center items-center">
+              <div class="w-[8px] h-0 border-b-[2.5px] border-solid border-[#A3A3A3]"></div>
+            </div>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[16px] border-b-[1px] border-solid border-[#DBDBDB] grid grid-cols-3">
+            <p class="font-[600] text-[18px] leading-[25px] text-primary">Link Explorer</p>
+            <div class="flex justify-center items-center">
+              <div class="w-[8px] h-0 border-b-[2.5px] border-solid border-[#A3A3A3]"></div>
+            </div>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[16px] grid grid-cols-3">
+            <p class="font-[600] text-[18px] leading-[25px] text-primary">Advanced User Management</p>
+            <div class="flex justify-center items-center">
+              <div class="w-[8px] h-0 border-b-[2.5px] border-solid border-[#A3A3A3]"></div>
+            </div>
+            <div class="flex justify-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="flex mt-[77px] gap-[16px] items-center">
+            <div class="w-[48px] h-[48px] bg-[#FAFAFA] border-[1px] border-solid border-[#E5E5E5] rounded-[32px] flex justify-center items-center">
+              <img src="./assets/images/users.svg" class="w-[24px]" alt="users">
+            </div>
+            <div class="w-[113px] h-[48px] bg-[#FAFAFA] border-[1px] border-solid border-[#E5E5E5] rounded-[32px] flex justify-center items-center">
+              <p class="font-[900] text-[20px] leading-[28px] text-primary">Reach</p>
+            </div>
+            <p class="font-[400] text-[18px] leading-[25px] text-secondary">Be more effective with time/energy & write better based on ecosystem.</p>
+          </div>          
+          <div class="px-[24px] pb-[20px] mt-[38px] border-b-[1px] border-solid border-[#DBDBDB] grid grid-cols-3">
+            <div>
+              <p class="w-[277px] h-[50px] font-[600] text-[18px] leading-[25px] text-primary">Boosting Your Content Across Platform to relevant readers</p>
+              <ul class="w-[277px] h-[200px] list-disc list-outside px-[24px] mt-[16px]">
+                <li class="font-[400] text-[18px] leading-[25px] text-secondary">
+                  Promoting your specific content on other relevant articles (where the majority of our impressions come from)
+                </li>
+                <li  class=" font-[400] text-[18px] leading-[25px] text-secondary">
+                  Capped at total impressions count (across different boosts)
+                </li>
+              </ul>      
+            </div>               
+            <div class="flex justify-center items-center">
+              <div class="w-[8px] h-0 border-b-[2.5px] border-solid border-[#A3A3A3]"></div>
+            </div>
+            <div class="flex justify-center items-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[16px] border-b-[1px] border-solid border-[#DBDBDB] grid grid-cols-3">
+            <div>
+              <p class="w-[277px] h-[50px] font-[600] text-[18px] leading-[25px] text-primary">Exclusive Advertising Opportunity on DEV</p>
+              <p class="w-[277px] h-[50px] font-[400] text-[18px] leading-[25px]  mt-[16px] text-secondary">
+                Access to Billboards to boost anything (Ads)
+              </p>    
+            </div>               
+            <div class="flex justify-center items-center">
+              <div class="w-[8px] h-0 border-b-[2.5px] border-solid border-[#A3A3A3]"></div>
+            </div>
+            <div class="flex justify-center items-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[16px] border-b-[1px] border-solid border-[#DBDBDB] grid grid-cols-3">
+            <p class="font-[600] text-[18px] leading-[25px] text-primary">Boosted Articles</p>
+            <div class="flex justify-center items-center">
+              <div class="w-[8px] h-0 border-b-[2.5px] border-solid border-[#A3A3A3]"></div>
+            </div>
+            <div class="flex justify-center items-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[16px] border-b-[1px] border-solid border-[#DBDBDB] grid grid-cols-3">
+            <p class="font-[600] text-[18px] leading-[25px] text-primary">Featured Org on Sidebar</p>
+            <div class="flex justify-center items-center">
+              <div class="w-[8px] h-0 border-b-[2.5px] border-solid border-[#A3A3A3]"></div>
+            </div>
+            <div class="flex justify-center items-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[16px] grid grid-cols-3">
+            <p class="font-[600] text-[18px] leading-[25px] text-primary">Ability to Capture Member email</p>
+            <div class="flex justify-center items-center">
+              <div class="w-[8px] h-0 border-b-[2.5px] border-solid border-[#A3A3A3]"></div>
+            </div>
+            <div class="flex justify-center items-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="flex mt-[77px] gap-[16px] items-center">
+            <div class="w-[48px] h-[48px] bg-[#FAFAFA] border-[1px] border-solid border-[#E5E5E5] rounded-[32px] flex justify-center items-center">
+              <img src="./assets/images/outcome.svg" class="w-[21px]" alt="outcome">
+            </div>
+            <div class="w-[142px] h-[48px] bg-[#FAFAFA] border-[1px] border-solid border-[#E5E5E5] rounded-[32px] flex justify-center items-center">
+              <p class="font-[600] text-[18px] leading-[25px] text-primary">Outcome</p>
+            </div>
+            <p class="font-[400] text-[18px] leading-[25px] text-secondary">Improve Conversions</p>
+          </div>
+          <div class="px-[24px] pb-[20px] mt-[38px] grid grid-cols-3">
+            <div>
+              <p class="w-[277px] h-[50px] font-[600] text-[18px] leading-[25px] text-primary">Optimized CTAs on your own articles</p>
+              <p class="w-[277px] h-[75px] font-[400] text-[18px] leading-[25px]  mt-[16px] text-secondary">
+                Billboards on Your Own Articles Ability to have dynamic call to actions
+              </p>    
+            </div>               
+            <div class="flex justify-center items-center">
+              <div class="w-[8px] h-0 border-b-[2.5px] border-solid border-[#A3A3A3]"></div>
+            </div>
+            <div class="flex justify-center items-center">
+              <i class="fa-solid fa-circle-check w-[24px] h-[24px] text-[23px] bg-gradient-to-r from-[#065F46] to-[#059669] bg-clip-text text-transparent border-[1px] border-solid border-[rgba(255, 255, 255, 0.3)] shadow-[0_3px_9px_rgba(5,150,105,0.2)] rounded-[36px]"></i>
+            </div>
+          </div>
+          <div class="mt-[74px] float-right">
+            <button class="w-[326px] h-[56px] bg-[#E0E7FF] border-[3px] border-solid border-[#EEF2FF] hover:border-[#6366F1] rounded-[16px]">
+              <p class="font-[700] text-[16px] leading-[26px] text-[#312E81]">Start with FREE plan</p>
+            </button>
+            <button class="w-[326px] h-[56px] bg-gradient-to-r from-[#4338CA] hover:from-[#2B238D] to-[#6366F1] hover:to-[#3337DB] shadow-[0_4px_12px_rgba(88,86,228,0.4)] hover:shadow-[0_4px_12px_rgba(88,86,228,0.7)] border-[3px] border-solid border-white border-opacity-30 rounded-[16px] ml-[32px]">
+              <p class="font-[700] text-[16px] text-white leading-[26px]">Contact us for PRO plan</p>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="w-full bg-white pt-[48px] px-[72px]  mt-[32px] rounded-[40px]">
+        <div class="flex items-center">
+          <img src="./assets//images/Logo.svg" class="w-[72px]" alt="logo" />
+          <div class="w-[660px] h-[64px] ml-[21px]">
+            <p class="font-[400] leading-[32px] text-[20px] text-secondary">
+              A constructive and inclusive social network for software developers. With you every step of your journey.
+            </p>
+          </div>          
+        </div>
+        <div class="grid grid-cols-5 gap-4">
+          <div class="flex flex-col gap-y-[12px] mt-[40px]">
+            <a href="#" class="">Home</a>
+            <a href="#" class="">Listings</a>
+            <a href="#" class="">Podcasts</a>
+          </div>
+          <div class="flex flex-col gap-y-[12px] mt-[40px]">
+            <a href="#" class="">Videos</a>
+            <a href="#" class="">Tags</a>
+            <a href="#" class="">FAQs</a>
+          </div>
+          <div class="flex flex-col gap-y-[12px] mt-[40px]">
+            <a href="#" class="">Forem shop</a>
+            <a href="#" class="">Sponsors</a>
+            <a href="#" class="">About us</a>
+          </div>
+          <div class="flex flex-col gap-y-[12px] mt-[40px]">
+            <a href="#" class="">Contact</a>
+            <a href="#" class="">Guides</a>
+            <a href="#" class="">Software comparisons</a>
+          </div>
+          <div class="flex flex-col gap-y-[12px] mt-[40px]">
+            <a href="#" class="">Code of conduct</a>
+            <a href="#" class="">Privacy Policy</a>
+            <a href="#" class="">Terms of use</a>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <div class="w-[147px] h-[40px] bg-[#FAFAFA] border-[1px] border-solid border-[#E5E5E5] rounded-[32px] flex justify-center items-center">
+            <p class="font-[700] leading-[22px] text-[16px] text-primary">Built on Forem</p>
+          </div>
+          <p class="w-[592px] h-[20px] font-[400] leading-[22px] text-[16px] text-secondary ml-[16px]">
+            the <span class="underline">open source</span> software that powers DEV and other inclusive communities.
+          </p>
+        </div>
+        <div class="w-full h-0 border-b-[1px] border-solid border-[#DBDBDB] mt-[40px]"></div>
+        <div class="py-[32px] text-center">
+          <p class="font-[400] leading-[22px] text-[16px] text-secondary">Made with <i class="fa-solid fa-heart text-red-500"></i> and <span class="underline">Ruby on Rails</span>. DEV Community 👩‍💻👨‍💻 © 2016 - 2023.</p>
+        </div>
+      </section>
     </div>
   </body>
 </html>
