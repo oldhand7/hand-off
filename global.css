@@ -3,3 +3,7 @@
   --color-text-primary: #171717;
   --color-text-secondary: #737373;  
 }
+
+#proBlock::-webkit-scrollbar {
+  width: 0px;
+}
